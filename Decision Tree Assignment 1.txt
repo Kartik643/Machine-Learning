@@ -1,0 +1,40 @@
+Q1. Describe the decision tree classifier algorithm and how it works to make predictions.
+
+A decision tree classifier is a supervised machine learning algorithm that makes decisions based on a series of questions or conditions applied to the input features. It works by recursively splitting the dataset into subsets based on the most significant feature at each step, creating a tree-like structure. The decision-making process starts from the root node and progresses through the branches until a leaf node is reached, which corresponds to the predicted class.
+
+Q2. Provide a step-by-step explanation of the mathematical intuition behind decision tree classification.
+
+Decision tree classification involves selecting the feature that best splits the data at each node. The algorithm uses metrics like Gini impurity or information gain to measure the effectiveness of a split. The goal is to maximize the homogeneity within each resulting subset. The process continues recursively until a stopping criterion is met, such as a maximum depth or a minimum number of samples in a leaf node.
+
+Q3. Explain how a decision tree classifier can be used to solve a binary classification problem.
+
+In a binary classification problem, a decision tree will partition the data into two classes based on the values of the input features. At each node, a decision is made to assign an observation to one of the two classes, and this process continues until the tree is fully grown. The final prediction for a given input is determined by the majority class in the leaf node reached.
+
+Q4. Discuss the geometric intuition behind decision tree classification and how it can be used to make predictions.
+
+Geometrically, a decision tree divides the feature space into regions, each associated with a particular class. These regions can be visualized as rectangles (for 2D features). The decision boundaries are orthogonal to the feature axes, and predictions are made based on the region in which a data point falls.
+
+Q5. Define the confusion matrix and describe how it can be used to evaluate the performance of a classification model.
+
+A confusion matrix is a table that summarizes the performance of a classification model. It compares the predicted class labels to the true class labels and includes four metrics: True Positive (TP), True Negative (TN), False Positive (FP), and False Negative (FN).
+
+Q6. Provide an example of a confusion matrix and explain how precision, recall, and F1 score can be calculated from it.
+
+Predicted Positive	Predicted Negative
+Actual Positive	50	10
+Actual Negative	5	100
+Precision = TP / (TP + FP) = 50 / (50 + 5) = 0.909
+Recall = TP / (TP + FN) = 50 / (50 + 10) = 0.833
+F1 Score = 2 * (Precision * Recall) / (Precision + Recall) = 2 * (0.909 * 0.833) / (0.909 + 0.833) = 0.869
+
+Q7. Discuss the importance of choosing an appropriate evaluation metric for a classification problem and explain how this can be done.
+
+The choice of an evaluation metric depends on the specific goals and characteristics of the problem. Precision is important when false positives are costly, recall is crucial when false negatives have higher consequences, and F1 score provides a balance. Accuracy may be misleading in imbalanced datasets. Choosing the right metric requires understanding the problem context and priorities.
+
+Q8. Provide an example of a classification problem where precision is the most important metric, and explain why.
+
+In a spam email detection system, precision is crucial. False positives (classifying a non-spam email as spam) can be highly annoying to users, potentially causing them to miss important emails. Therefore, optimizing for precision helps minimize the occurrence of false positives.
+
+Q9. Provide an example of a classification problem where recall is the most important metric, and explain why.
+
+Consider a medical diagnosis system for a life-threatening disease. In this case, recall is more important because missing a positive case (false negative) could be disastrous. It's preferable to have more false positives and conduct further tests to confirm than to miss a critical diagnosis.
